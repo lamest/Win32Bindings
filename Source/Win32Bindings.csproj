@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E6D7B0E-C0C0-4F96-B42B-0EE9A35F4827}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Win32Bindings</RootNamespace>
+    <AssemblyName>Win32Bindings</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HID\Defines\HIDP_REPORT_TYPE.cs" />
+    <Compile Include="HID\Defines\HidStatus.cs" />
+    <Compile Include="HID\Defines\UsageCollection.cs" />
+    <Compile Include="HID\Defines\UsagePage.cs" />
+    <Compile Include="HID\HidApiBindings.cs" />
+    <Compile Include="HID\Structs\HIDD_ATTRIBUTES.cs" />
+    <Compile Include="HID\Structs\HIDP_BUTTON_CAPS.cs" />
+    <Compile Include="HID\Structs\HIDP_BUTTON_CAPS_NOT_RANGE.cs" />
+    <Compile Include="HID\Structs\HIDP_BUTTON_CAPS_RANGE.cs" />
+    <Compile Include="HID\Structs\HIDP_CAPS.cs" />
+    <Compile Include="HID\Structs\HIDP_VALUE_CAPS.cs" />
+    <Compile Include="HID\Structs\HIDP_VALUE_CAPS_NOT_RANGE.cs" />
+    <Compile Include="HID\Structs\HIDP_VALUE_CAPS_RANGE.cs" />
+    <Compile Include="HID\Structs\USAGE_AND_PAGE.cs" />
+    <Compile Include="kernel32\Defines\ACCESS_MASK.cs" />
+    <Compile Include="kernel32\Defines\ERROR.cs" />
+    <Compile Include="kernel32\Defines\FileAccess.cs" />
+    <Compile Include="kernel32\Defines\FileFlagsAndAttributes.cs" />
+    <Compile Include="kernel32\Defines\FileMode.cs" />
+    <Compile Include="kernel32\Defines\FilePointerMoveMethod.cs" />
+    <Compile Include="kernel32\Defines\FILE_ACTION.cs" />
+    <Compile Include="kernel32\Defines\FILE_ATTRIBUTE.cs" />
+    <Compile Include="kernel32\Defines\FILE_FLAG.cs" />
+    <Compile Include="kernel32\Defines\FILE_GENERIC.cs" />
+    <Compile Include="kernel32\Defines\FILE_NOTIFY_CHANGE.cs" />
+    <Compile Include="kernel32\Defines\FILE_SHARE.cs" />
+    <Compile Include="kernel32\Defines\GENERIC.cs" />
+    <Compile Include="kernel32\Defines\SECURITY.cs" />
+    <Compile Include="kernel32\Defines\SECURITY_IMPERSONATION_LEVEL.cs" />
+    <Compile Include="kernel32\Defines\STANDARD_RIGHTS.cs" />
+    <Compile Include="kernel32\FileOperations.cs" />
+    <Compile Include="kernel32\Filesystem.cs" />
+    <Compile Include="kernel32\Structs\GENERIC_MAPPING.cs" />
+    <Compile Include="kernel32\Structs\SECURITY_ATTRIBUTES.cs" />
+    <Compile Include="kernel32\WinKernel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user32\Defines\GIDC.cs" />
+    <Compile Include="user32\Defines\KEYBOARD.cs" />
+    <Compile Include="user32\Defines\MOUSE.cs" />
+    <Compile Include="user32\Defines\RID.cs" />
+    <Compile Include="user32\Defines\RIDEV.cs" />
+    <Compile Include="user32\Defines\RIDI.cs" />
+    <Compile Include="user32\Defines\RIM.cs" />
+    <Compile Include="user32\Defines\RIM_TYPE.cs" />
+    <Compile Include="user32\Defines\RI_KEY.cs" />
+    <Compile Include="user32\Defines\RI_MOUSE.cs" />
+    <Compile Include="user32\RawInput.cs" />
+    <Compile Include="user32\Structs\RAWHID.cs" />
+    <Compile Include="user32\Structs\RAWINPUT.cs" />
+    <Compile Include="user32\Structs\RAWINPUTDEVICE.cs" />
+    <Compile Include="user32\Structs\RAWINPUTDEVICELIST.cs" />
+    <Compile Include="user32\Structs\RAWINPUTHEADER.cs" />
+    <Compile Include="user32\Structs\RAWKEYBOARD.cs" />
+    <Compile Include="user32\Structs\RAWMOUSE.cs" />
+    <Compile Include="user32\Structs\RID_DEVICE_INFO.cs" />
+    <Compile Include="user32\Structs\RID_DEVICE_INFO_HID.cs" />
+    <Compile Include="user32\Structs\RID_DEVICE_INFO_KEYBOARD.cs" />
+    <Compile Include="user32\Structs\RID_DEVICE_INFO_MOUSE.cs" />
+    <Compile Include="user32\Window.cs" />
+    <Compile Include="WinMessage\ListOfWindowsMessages.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
